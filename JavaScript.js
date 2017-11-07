@@ -45,3 +45,27 @@ function updateDiv() {
     var outputString = "Hello and welcome to Raz's webpage.";
     document.getElementById("sectionOne").innerHTML = "<p>" + outputString+"</p>"
 }
+
+function swap() {
+
+    var imageSrc = document.getElementById("swapImage").src;
+
+    if (imageSrc.includes("download")) {
+        document.getElementById("swapImage").src = "Images/tiger2.jpg";
+    }
+    else {
+        document.getElementById("swapImage").src = "Images/download.jpg";
+    }
+    console.log(document.getElementById("swapImage").src);
+}
+
+function printArray() {
+    var favCharacters = ["Luffy", "Sanji", "Zoro", "Law"];
+    var outputText = "<ul>";
+
+    for (i = 0; i < favCharacters.length; i++) {
+        outputText += "<li>" + favCharacters[i] + "</li>"
+    }
+    outputText += "</ul";
+    document.getElementById("sectionTwo").innerHTML = outputText;
+}
